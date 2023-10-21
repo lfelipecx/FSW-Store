@@ -50,7 +50,8 @@ const Cart = () => {
                 </ScrollArea>
             </div>
 
-            <div className="flex flex-col gap-3">
+            {products.length > 0 && (
+                <div className="flex flex-col gap-3">
                 <Separator />
                 <div className="flex items-center justify-between text-xs">
                     <p>Subtotal</p>
@@ -77,6 +78,7 @@ const Cart = () => {
 
                 <Button className="mt-7 font-bold uppercase" onClick={handleFinishPurchaseClick}>Finalizar compra</Button>
             </div>
+            )}
 
             
         </div>
